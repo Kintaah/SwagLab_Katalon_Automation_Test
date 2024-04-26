@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>1005_Verify the Name sort function on home page(Ascending and descending)</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c0c98019-3956-487a-b36c-9d87157cfaaa</testCaseGuid>
+</TestCaseEntity>

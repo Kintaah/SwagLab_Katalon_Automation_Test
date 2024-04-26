@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>1004_Verify user able to click on Remove button after adding the product</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e3b5cda1-bf28-4ace-967b-9b65e70a2a00</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,29 @@
+{
+  "keywordFileContentHash": "4CDC1A84AF8B06BCA2423CA32D7A35D1",
+  "keywordClasses": [
+    {
+      "name": "CustomKW",
+      "keywordMethods": [
+        {
+          "name": "getTextOfListElements",
+          "parameters": [
+            {
+              "name": "testObject",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "com.kms.katalon.core.testobject.TestObject",
+                "unresolvedClassName": "TestObject",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "javadocParsed": false
+}

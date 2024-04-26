@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>1000_Verify user can login successfully</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>85a5b5c6-0f76-465e-9a55-bb3e4ee32caf</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>1003_Verify user able to click on Add to cart button</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bcea97ab-3757-4c85-8b93-922181dcd8f1</testCaseGuid>
+</TestCaseEntity>
