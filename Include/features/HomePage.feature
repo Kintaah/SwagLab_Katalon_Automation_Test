@@ -42,3 +42,15 @@ Feature: Web Home Page feature
     And Verify 'Name' sort function in 'Ascending' order
     And I select 'Name (Z to A)' on the sort dropdown
     Then Verify 'Name' sort function in 'Descending' order
+    
+   @1006
+   Scenario: Verify the Price sort function on home page(Ascending and descending)
+   	Given I open Swag Labs website
+    When I input 'standard_user' value on the 'Username' text field
+    And I input 'secret_sauce' value on the 'Password' text field
+    And I click on 'Login' button
+    Then User can see the home page
+    When I select 'Price (low to high)' on the sort dropdown
+    And Verify 'Price' sort function in 'Ascending' order
+    And I select 'Price (high to low)' on the sort dropdown
+    Then Verify 'Price' sort function in 'Descending' order

@@ -62,38 +62,60 @@ class HomePage {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/002_HomePage/div_ProductText',[param:value]))
 	}
 	
-	@When('Verify {string} sort function in {string} order')
+	@When("Verify {string} sort function in {string} order")
 	def verify_sort_func(String sortBy, String sortType) {
-		String xpath = "";
-	
+		String xpath = ""
+
 		switch (sortBy.toLowerCase()) {
 			case "name":
-				xpath = 'Object Repository/002_HomePage/div_NameData';
-				break;
+				xpath = 'Object Repository/002_HomePage/div_NameData'
+				break
 			case "price":
-				xpath = 'Object Repository/002_HomePage/div_PriceData';
-				break;
+				xpath = 'Object Repository/002_HomePage/div_PriceData'
+				break
 			default:
-				throw new IllegalArgumentException("Invalid sorting type: " + sortBy);
+				throw new IllegalArgumentException("Invalid sorting type: " + sortBy)
 		}
-	
-		List<String> tableValues = CustomKW.getTextOfListElements(findTestObject(xpath));
-	
-		ArrayList<String> referenceValues = new ArrayList<String>(tableValues);
-	
+
+		List<String> tableValues = CustomKW.getTextOfListElements(findTestObject(xpath))
+
+		println("Original Values: $tableValues")
+
+		List referenceValues
+
+		if (sortBy.toLowerCase() == "price") {
+			// Convert price strings to numeric values
+			referenceValues = tableValues.collect { it.replace('$', '').toFloat() }
+		} else {
+			// For name data, no conversion is required
+			referenceValues = new ArrayList<>(tableValues)
+		}
+
+		// Sort the reference list based on the sort order
 		switch (sortType.toLowerCase()) {
 			case "ascending":
-				Collections.sort(referenceValues);
-				break;
+				referenceValues.sort()
+				break
 			case "descending":
-				Collections.sort(referenceValues, Collections.reverseOrder());
-				break;
+				referenceValues.sort(Collections.reverseOrder())
+				break
 			default:
-				throw new IllegalArgumentException("Invalid sorting order: " + sortType);
+				throw new IllegalArgumentException("Invalid sorting order: " + sortType)
 		}
-	
-		assert referenceValues.equals(tableValues);
+
+		println("Sorted Reference Values: $referenceValues")
+
+		// If dealing with price, convert tableValues to Float for comparison
+		if (sortBy.toLowerCase() == "price") {
+			List<Float> numericValues = tableValues.collect { it.replace('$', '').toFloat() }
+			assert numericValues == referenceValues : "Sorting validation failed"
+		} else {
+			assert tableValues == referenceValues : "Sorting validation failed"
+		}
 	}
+
+
+
 	
 	@When("I select {string} on the sort dropdown")
 	def select_sort_dropdown(String value) {

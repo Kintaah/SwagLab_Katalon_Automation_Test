@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>1006_Verify the Price sort function on home page(Ascending and descending)</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>af8ac5ca-020b-4e65-a2ad-862336d42741</testCaseGuid>
+</TestCaseEntity>
